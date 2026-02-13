@@ -1,0 +1,22 @@
+﻿  TerrainTile.cpp
+C:\Users\Vovaa\OneDrive\Рабочий стол\CG\Tucna\Terrain\sources\TerrainTile.cpp(93,25): warning C4244: 'argument': conversion from 'int' to '_Ty', possible loss of data
+          with
+          [
+              _Ty=uint16_t
+          ]
+C:\Users\Vovaa\OneDrive\Рабочий стол\CG\Tucna\Terrain\sources\TerrainTile.cpp(94,25): warning C4244: 'argument': conversion from 'int' to '_Ty', possible loss of data
+          with
+          [
+              _Ty=uint16_t
+          ]
+C:\Users\Vovaa\OneDrive\Рабочий стол\CG\Tucna\Terrain\sources\TerrainTile.cpp(95,25): warning C4244: 'argument': conversion from 'int' to '_Ty', possible loss of data
+          with
+          [
+              _Ty=uint16_t
+          ]
+C:\Users\Vovaa\OneDrive\Рабочий стол\CG\Tucna\Terrain\sources\TerrainTile.cpp(96,25): warning C4244: 'argument': conversion from 'int' to '_Ty', possible loss of data
+          with
+          [
+              _Ty=uint16_t
+          ]
+  Terrain.vcxproj -> C:\Users\Vovaa\OneDrive\Рабочий стол\CG\Tucna\Terrain\x64\Debug\Terrain.exe
