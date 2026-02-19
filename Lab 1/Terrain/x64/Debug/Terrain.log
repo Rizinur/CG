@@ -1,14 +1,1 @@
-﻿  Camera.cpp
-  d3dApp.cpp
-  d3dUtil.cpp
-  DDSTextureLoader.cpp
-  GameTimer.cpp
-  GeometryGenerator.cpp
-  MathHelper.cpp
-  FrameResource.cpp
-  QuadTree.cpp
-  Terrain.cpp
-  TerrainApp.cpp
-  Generating Code...
-  LINK : C:\Users\Rizinur\Desktop\Lab 1\x64\Debug\Terrain.exe not found or not built by the last incremental link; performing full link
-  Terrain.vcxproj -> C:\Users\Rizinur\Desktop\Lab 1\x64\Debug\Terrain.exe
+﻿  Terrain.vcxproj -> C:\Users\Rizinur\Documents\GitHub\CG\Lab 1\x64\Debug\Terrain.exe
