@@ -13,6 +13,7 @@ cbuffer cbTAA : register(b0)
     float2 gScreenSize;
     float gBlendFactor;
     float gMotionScale;
+    float gMotionDebugEnabled;
     float2 gPadding;
 };
 
@@ -141,6 +142,17 @@ float4 PS(VertexOut pin) : SV_Target
     
     // Final blend
     float3 finalColor = lerp(historyRGB, currentRGB, blend);
+    
+    if (gMotionDebugEnabled > 0.5f)
+    {
+        float2 rawVelocity = gMotionVectors.Sample(gsamPointClamp, uv).rg;
+        float velocityMag = length(rawVelocity);
+        
+        if (velocityMag > 0.00005f)
+        {
+            finalColor = float3(1.0f, 0.0f, 0.0f);
+        }
+    }
     
     return float4(finalColor, 1.0f);
 }

@@ -151,6 +151,8 @@ private:
     bool mTemporalActive = true;
 
     POINT mCursorPosition;
+
+    bool mShowMotionVectors = false;
 };
 
 int WINAPI WinMain(HINSTANCE instance, HINSTANCE prevInstance,
@@ -716,6 +718,19 @@ void TemporalDemo::ProcessInput(const GameTimer& timer)
         tPressed = false;
     }
 
+    static bool rPressed = false;
+    if (GetAsyncKeyState('R') & 0x8000)
+    {
+        if (!rPressed)
+        {
+            mShowMotionVectors = !mShowMotionVectors;
+            rPressed = true;
+        }
+    }
+    else
+    {
+        rPressed = false;
+    }
     mViewCamera.UpdateViewMatrix();
 }
 
@@ -860,6 +875,7 @@ void TemporalDemo::UpdateTemporalData(const GameTimer& timer)
     mTemporalConstants.ScreenSize = XMFLOAT2((float)mClientWidth, (float)mClientHeight);
     mTemporalConstants.BlendFactor = 0.04f;
     mTemporalConstants.MotionScale = 1.0f;
+    mTemporalConstants.MotionDebugEnabled = mShowMotionVectors ? 1.0f : 0.0f;
 
     auto taaBuffer = mCurrentFrame->TAACB.get();
     taaBuffer->CopyData(0, mTemporalConstants);

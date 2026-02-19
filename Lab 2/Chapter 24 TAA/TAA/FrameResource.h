@@ -46,7 +46,8 @@ struct TAAConstants
     DirectX::XMFLOAT2 ScreenSize = { 0.0f, 0.0f };
     float BlendFactor = 0.1f;
     float MotionScale = 1.0f;
-    DirectX::XMFLOAT2 Padding = { 0.0f, 0.0f };
+    float MotionDebugEnabled = 0.0f;
+    float Padding = 0.0f;
 };
 
 struct MaterialData
